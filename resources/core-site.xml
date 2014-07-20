@@ -7,7 +7,7 @@
 	<property> 
 		<!-- Indicamos la URL donde se va a lanzar el servicio hdfs (namenode) --> 
 		<name>fs.default.name</name> 
-		<value>hdfs://sluangsay:8020</value> 
+		<value>hdfs://masterbicing:8020</value> 
 	</property> 
 </configuration>
 
