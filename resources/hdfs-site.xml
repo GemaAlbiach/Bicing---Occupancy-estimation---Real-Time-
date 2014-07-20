@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+	<property> 
+		<!-- Como se trata de un clúster pequeño, solo requerimos 2 replicas de cada bloque --> 
+		<name>dfs.replication</name> 
+		<value>2</value> 
+	</property> 
+	<property> 
+		<!-- Indicamos el directorio donde se almacenarán los metadatos de hdfs (namenode). En esta configuración hemos localizado todos los datos que se generan en hadoop bajo una misma carpeta /srv/data --> 
+		<name>dfs.name.dir</name> 
+		<value>/srv/data/dfs/nn</value> 
+	</property> 
+	<property> 
+		<!-- Indicamos el directorio donde se almacenarán los checkpoints de los metadatos de hdfs --> 
+		<name>fs.checkpoint.dir</name> 
+		<value>/srv/data/dfs/snn</value> 
+	</property> 
+	<property> 
+		<!-- Indicamos el directorio bajo el cual se almacenarán los bloques de datos hdfs (datanode) --> 
+		<name>dfs.data.dir</name> 
+		<value>/srv/data/dfs/dn</value> 
+	</property> 
+	<property> 
+		<!-- Este parámetro permite salir más rápido del safemode. Indica el número de segundos que espera el namenode cuando haya detectado la localización
+		     de los bloques de los datanodes --> 
+		<name>dfs.safemode.extension</name> 
+		<value>0</value> 
+	</property> 
+</configuration>
+
