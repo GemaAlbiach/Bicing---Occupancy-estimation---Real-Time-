@@ -7,7 +7,7 @@
 	<property> 
 		<!-- Indicamos la URL donde se va a lanzar el demonio del jobtracker --> 
 		<name>mapred.job.tracker</name> 
-		<value>sluangsay:8021</value> 
+		<value>master:8021</value> 
 	</property> 
 	<property> 
 		<!-- Directorio donde se almacenan datos temporales de los job mapreduce --> 
